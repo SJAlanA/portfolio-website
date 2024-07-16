@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const leadershipList = document.getElementById('leadership-list');
     leadershipRoles.forEach(leadership => {
         const leadershipItem = document.createElement('li');
-        leadershipItem.innerHTML = `<h3>${leadership.role}</h3><p>${leadership.organization}</p><p>${leadership.duration}</p><p>${leadership.description}`;
+        leadershipItem.innerHTML = `<h3>${leadership.role}</h3><p>${leadership.organization}</p><p>${leadership.duration}</p><p>${leadership.description}</p>`;
         leadershipList.appendChild(leadershipItem);
     });
 
