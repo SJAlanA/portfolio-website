@@ -17,7 +17,7 @@ body {
 }
 
 .header h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin: 0;
 }
 
@@ -58,7 +58,7 @@ body {
 section {
     text-align: center;
     margin: 2rem 0;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #FFFFFF;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -71,6 +71,11 @@ h2 {
 }
 
 /* About section styles */
+
+.about {
+    padding: 1px;
+}
+
 .about-content {
     display: flex;
     align-items: center;
@@ -95,11 +100,15 @@ h2 {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    width: 450px;
-    height: 450px;
+    width: 600px;
+    height: 600px;
 }
 
 /* Project styles */
+.projects {
+    padding: 1px;
+}
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -120,6 +129,10 @@ h2 {
 }
 
 /* Experience styles */
+.experience {
+    padding: 1px;
+}
+
 .experience-list {
     display: flex;
     flex-direction: column;
@@ -142,6 +155,18 @@ h2 {
 }
 
 /* Skills and Certifications styles */
+.skills {
+    padding: 1px;
+}
+
+.leadership {
+    padding: 1px;
+}
+
+.certifications {
+    padding: 1px;
+}
+
 .skills ul, .certifications ul, .leadership ul {
     list-style: none;
     padding: 0;
@@ -156,6 +181,10 @@ h2 {
 }
 
 /* Contact styles */
+.contact {
+    padding: 1px;
+}
+
 .contact a {
     color: #0073e6;
     text-decoration: none;
