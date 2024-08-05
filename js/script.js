@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const certifications = [
+        'J.P. Morgan Software Engineering Virtual Experience, Forage, Aug 2024',
         'JPMorgan Chase & Co. Corporate Analyst Development Program (CADP), Forage, July 2024',
         'Career Essentials in Cybersecurity, Microsoft and LinkedIn, February 2024',
         'SQL Essential Training, LinkedIn, June 2024',
