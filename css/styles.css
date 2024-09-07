@@ -110,16 +110,14 @@ h2 {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 1rem;
+    display: block;
 }
 
 .project-card {
-    padding: 1rem;
-    border: 1px solid #CED4DA;
-    border-radius: 8px;
+    margin-bottom: 20px; /* Adds space between project cards */
+    padding: 15px;
+    border: 1px solid #ccc; /* Optional: Adds border to project cards */
+    border-radius: 5px;
     background-color: #E9ECEF;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
