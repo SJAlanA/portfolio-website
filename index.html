@@ -1,82 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahai Jordi Alan A - Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="favicon.ico" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Sahai Jordi Alan - Automotive Cybersecurity Engineer & Penetration Tester" />
+  <title>SJ Alan | Professional Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
-    <header class="header">
-        <h1>Sahai Jordi Alan</h1>
-        <p>Software Engineer</p>
-    </header>
-    <nav class="navbar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#leadership">Leadership</a></li>
-            <li><a href="#contact">Contact</a></li>
+  <header class="header">
+    <!-- ...existing header content... -->
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">Sahai Jordi Alan</a>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active">Home</a></li>
+          <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="#blog" class="nav__link">Blog</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
+      </div>
+      <div class="nav__toggle">
+        <div class="hamburger"></div>
+      </div>
     </nav>
-    <section id="about" class="about">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <div class="description">
-                <p>👋 Hello! I am Sahai Jordi Alan, an ambitious and motivated undergraduate student specializing in Electronics and Communication Engineering at the College of Engineering, Guindy. With a passion for technology and cybersecurity, I am interned as a Cyber Security Trainee at Tata Elxsi, where I have gained comprehensive exposure to network protocols and programming languages such as Python, C, and Bash.</p>
+  </header>
 
-                <p>💡 My experience spans across various roles and organizations, including being the Projects Student Director at CEG Tech Forum, a student-run organization that hosts the international techno-management fest, Kurukshetra. Here, I lead and inspire a dynamic team to plan and execute transformative projects, fostering a collaborative and agile environment.</p>
-                    
-                <p>🔧 I have hands-on experience in developing supportive tools for spoofing and encryption, implementing security attacks, and worked on innovative projects like a man-hole scavenging semi-automatic robot. My technical skills are complemented by my proficiency in project management, critical thinking, and team management.</p>
-                    
-                <p>🌐 Additionally, I have held various technical roles such as Marketing Core for ECEA CEG, Prototype Engineer at SINGORISON, and Project Intern at CSIR-CEERI. These positions have enhanced my expertise in embedded systems, microcontroller programming, and software developement, while also allowing me to develop strong project management, marketing and leadership skills.</p>
-                    
-                <p>🎓 I am eager to leverage my diverse skill set and experiences in a software role, where I can continue to learn, grow, and make a meaningful impact. Let's connect and explore how we can collaborate to drive technological innovation!</p>
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="home__container container grid">
+            <div class="home__content">
+                <h1 class="home__title">Sahai Jordi Alan</h1>
+                <h2 class="home__subtitle">Automotive Cybersecurity Engineer</h2>
+                <p class="home__description">Hacking hardware is a fun thing to do</p>
+                <div class="home__buttons">
+                <a href="#portfolio" class="button button--primary">View Work</a>
+                <a href="#contact" class="button button--secondary">Hire Me</a>
+                </div>
+                <!-- Social Icons in Home Section -->
+                <div class="home__social">
+                <ul class="social-icons">
+                    <li>
+                        <a href="mailto:sahaijordialan@gmail.com" target="_blank" aria-label="Mail">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li>
+                    <a href="https://www.linkedin.com/in/sahaijordialana" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="https://github.com/SJAlanA" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    </li>
+                    <li>
+                    <a href="https://leetcode.com/u/Sahai-Jordi-Alan-A/" target="_blank" aria-label="LeetCode">
+                        <i class="fa-solid fa-code"></i>
+                    </a>
+                    </li>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1vFGtsBacIaKBPPZ1qx91UM6xmbDVGJLn/view?usp=sharing" target="_blank" aria-label="Resume">
+                            <i class="fa-solid fa-file"></i>
+                        </a>
+                    </li>
+                </ul>
+                </div>
             </div>
-            <div class="photo">
-                <img src="SJALAN.jpg" alt="Sahai Jordi Alan A">
             </div>
-        </div>
-    </section>
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div id="projects-grid" class="projects-grid"></div>
-    </section>
-    <section id="experience" class="experience">
-        <h2>Experience</h2>
-        <div id="experience-list" class="experience-list"></div>
-    </section>
-    <section id="skills" class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><b>Languages</b>: C/C++, Python, Bash, JavaScript, HTML/CSS, MySQL</li>
-            <li><b>Programming Concepts</b>: Data Structures and Algorithms, Cryptography, Operating Systems, OOPS, DBMS, Communication Networks, Debugging, FastAPI, Cloud Computing</li>
-            <li><b>IoT</b>: Raspberry Pi, Arduino Uno, Arduino Mega, ESP8266, ArduPilot APM, PixHawk</li>
-            <li><b>Soft Skills</b>: Problem-solving, Time Management, Agile Leadership, Networking, Creativity, Team Player</li>
-        </ul>
-    </section>
-    <section id="certifications" class="certifications">
-        <h2>Certifications</h2>
-        <ul id="certifications-list"></ul>
-    </section>
-    <section id="leadership" class="leadership">
-        <h2>Leadership and Responsibility</h2>
-        <ul id="leadership-list"></ul>
-    </section>
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sahaijordialan@gmail.com">sahaijordialan@gmail.com</a></p>
-        <p>Phone: +91 7010-693735</p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/sahaijordialana" target="_blank">Sahai Jordi Alan A</a></p>
-        <p>GitHub: <a href="https://github.com/SJAlanA" target="_blank">SJAlanA</a></p>
-    </section>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section__title">Featured Projects</h2>
+                <div class="portfolio__grid">
+                    <!-- Project items will be dynamically loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section__title">Latest Articles</h2>
+                <div class="blog__grid">
+                    <!-- Blog posts will be dynamically loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container grid">
+                <div class="about__image"></div>
+                <div class="about__content">
+                    <h2 class="section__title">About Me</h2>
+                    <p class="about__description">
+                        👋 Hi there! I'm Sahai Jordi Alan, an Electronics and Communication Engineering student at the College of Engineering, Guindy, with a strong passion for technology, cybersecurity, and innovation. 
+                        <br>
+                        <br>
+                        💻 As a Cyber Security Enginer at Tata Elxsi, where I am gaining hands-on experience in network protocols, reverse engineering and key programming languages like Python, C, ARM Assembly, and Bash.
+                        <br>
+                        <br>
+                        🚀 As the Projects Student Director at CEG Tech Forum, I’ve led over 150 students, managing 14+ projects and organizing Kurukshetra, an international techno-management fest. I thrive in collaborative, agile environments, turning ideas into impactful solutions.
+                    </p>
+                    <br>
+                    <div class="skills__container">
+                        <!-- Skills will be dynamically loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section__title">Get in Touch</h2>
+                <form class="contact__form" name="submit-to-google-sheet">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Name" name='Name' required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email" name='Email' required>
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__input form__textarea" placeholder="Message" name='Message' required></textarea>
+                    </div>
+                    <button type="submit" class="button button--primary">Send Message</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <p>&copy; <span id="year"></span> Sahai Jordi Alan A. All rights reserved.</p>
+        <div class="container">
+            <p class="footer__copy">&copy; 2025 Sahai Jordi Alan. All rights reserved</p>
+        </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
