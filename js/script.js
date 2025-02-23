@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
     const navToggle = document.querySelector('.nav__toggle');
     const navMenu = document.querySelector('.nav__menu');
     
     navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('show-menu');
-        document.body.classList.toggle('no-scroll');
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
     });
 
     // Smooth Scroll
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         let current = '';
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
             if (pageYOffset >= sectionTop - 50) {
                 current = section.getAttribute('id');
             }
@@ -56,6 +54,39 @@ document.addEventListener('DOMContentLoaded', () => {
         skillPill.textContent = skill;
         skillsContainer.appendChild(skillPill);
     });
+
+    const style = document.createElement('style');
+    style.textContent = `
+        .skill-pill {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            background: var(--secondary-color);
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .blog-post {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-post__meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+
+        .blog-post__link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+    `;
+    document.head.appendChild(style);
 
     // Dynamic Blog Loading
     const blogGrid = document.querySelector('.blog__grid');
@@ -90,45 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <p class="blog-post__excerpt">${post.excerpt}</p>
-            <a href=${post.link} class="blog-post__link">Read more →</a>
+            <a href="${post.link}" class="blog-post__link">Read more →</a>
         `;
         blogGrid.appendChild(postElement);
     });
 
-    // Add corresponding CSS for new elements
-    const style = document.createElement('style');
-    style.textContent = `
-        .skill-pill {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            margin: 0.5rem;
-            background: var(--secondary-color);
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .blog-post {
-            background: var(--secondary-color);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 1.5rem;
-        }
-
-        .blog-post__meta {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
-        }
-
-        .blog-post__link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-    `;
-    document.head.appendChild(style);
-
+    // Dynamic Projects Loading
     const portfolioGrid = document.querySelector('.portfolio__grid');
     const projects = [
         { title: 'Road Accident Detection', technology: 'Python, CNN, OpenCV',description: 'Developed a deep learning model achieving 89.73% AUC, reducing false positives by 10% in real-time accident detection. <br><br>Implemented Resnet 18 which is a Convolution Neural Network (CNN) for feature extraction and trained a Multilayer Perceptron (MLP) for precise accident classification. <br><br>Enhanced road safety with an AI-driven mobile app for alerts.' },
@@ -143,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
         projectCard.innerHTML = `
             <h3>${project.title}</h3>
             <br><br>
-            <h4>Tech Used: ${project.technology}</h5>
+            <h4>Tech Used: ${project.technology}</h4>
             <br><br>
             <p>${project.description}</p>
         `;
@@ -156,11 +154,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const msg = document.getElementById('msg')
 
     form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         .then(response => {
             msg.innerHTML = 'Message Sent - Thanks for contacting!'
-            setTimeout(function(){
+            setTimeout(() => {
                 msg.innerHTML = ''
             },5000)
             form.reset()
