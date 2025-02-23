@@ -1,6 +1,6 @@
 # Sahai Jordi Alan Portfolio
 
-This repository contains a responsive portfolio website for **Sahai Jordi Alan**, an Automotive Cybersecurity Engineer & Penetration Tester. The website showcases your projects, blog posts, skills, and contact information with a modern design, dynamic content, and smooth user interactions.
+This repository contains a responsive portfolio website for **Sahai Jordi Alan** (myself), Automotive Cybersecurity Engineer & Penetration Tester. The website showcases my projects, blog posts, skills, and contact information with a modern design, dynamic content, and smooth user interactions.
 
 ## Table of Contents
 
