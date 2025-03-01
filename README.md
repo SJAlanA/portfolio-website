@@ -8,7 +8,6 @@ Website - [Portfolio Website](https://sjalana.github.io/portfolio-website/)
 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
-- [License](#license)
 - [Contact](#contact)
 
 ## Features
@@ -28,10 +27,6 @@ Website - [Portfolio Website](https://sjalana.github.io/portfolio-website/)
 - **Font Awesome:** Icon library for social and other icons.
 - **Google Fonts:** Uses the "Inter" font for a modern look.
 - **Google Apps Script:** For handling contact form submissions to Google Sheets.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## Contact
 
