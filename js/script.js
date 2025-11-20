@@ -55,38 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         skillsContainer.appendChild(skillPill);
     });
 
-    const style = document.createElement('style');
-    style.textContent = `
-        .skill-pill {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            margin: 0.5rem;
-            background: var(--secondary-color);
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .blog-post {
-            background: var(--secondary-color);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            margin-bottom: 1.5rem;
-        }
-
-        .blog-post__meta {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin: 0.5rem 0;
-        }
-
-        .blog-post__link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-        }
-    `;
-    document.head.appendChild(style);
+    // Styles are now handled in style.css
 
     // Dynamic Blog Loading
     const blogGrid = document.querySelector('.blog__grid');
