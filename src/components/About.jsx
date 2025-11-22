@@ -2,9 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const skills = [
-    'Cyber Security', 'ARM', 'Python',
-    'C', 'Assembly', 'Reverse Engineering',
-    'ISO 21434', 'UDS', 'CAN'
+    'Cybersecurity', 'Penetration Testing', 'MITRE ATT&CK',
+    'Network protocols', 'Assembly', 'Reverse Engineering',
+    'C/C++', 'SQL', 'Python',
+    'OWASP Top 10'
 ];
 
 const About = () => {
