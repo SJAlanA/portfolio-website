@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send } from 'lucide-react';
 
 const Contact = () => {
     const [status, setStatus] = useState('');
@@ -24,78 +23,61 @@ const Contact = () => {
     };
 
     return (
-        <section id="contact" className="py-20 bg-secondary/30">
-            <div className="container mx-auto px-6 max-w-4xl">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-12"
-                >
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in <span className="text-accent">Touch</span></h2>
-                    <p className="text-gray-400">Have a project in mind or want to discuss cybersecurity? Send me a message.</p>
-                </motion.div>
+        <section id="contact" className="pb-20">
+            <h3 className="text-sm font-mono text-text-muted mb-8 uppercase tracking-widest">Contact</h3>
+            <div className="max-w-xl">
+                <p className="text-2xl mb-12 font-light">
+                    Interested in collaborating or discussing security? <br />
+                    <span className="text-white">Drop me a line.</span>
+                </p>
 
-                <motion.form
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    onSubmit={handleSubmit}
-                    className="space-y-6 bg-primary p-8 rounded-2xl border border-gray-800 shadow-xl"
-                >
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label htmlFor="Name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="group">
                             <input
                                 type="text"
                                 name="Name"
                                 required
-                                className="w-full px-4 py-3 bg-secondary rounded-lg border border-gray-700 focus:border-accent focus:outline-none text-white transition-colors"
-                                placeholder="John Doe"
+                                placeholder="Name"
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-text-muted focus:outline-none focus:border-white transition-colors"
                             />
                         </div>
-                        <div>
-                            <label htmlFor="Email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
+                        <div className="group">
                             <input
                                 type="email"
                                 name="Email"
                                 required
-                                className="w-full px-4 py-3 bg-secondary rounded-lg border border-gray-700 focus:border-accent focus:outline-none text-white transition-colors"
-                                placeholder="john@example.com"
+                                placeholder="Email"
+                                className="w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-text-muted focus:outline-none focus:border-white transition-colors"
                             />
                         </div>
                     </div>
-                    <div>
-                        <label htmlFor="Message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
+                    <div className="group">
                         <textarea
                             name="Message"
                             required
-                            rows="4"
-                            className="w-full px-4 py-3 bg-secondary rounded-lg border border-gray-700 focus:border-accent focus:outline-none text-white transition-colors resize-none"
-                            placeholder="Your message here..."
+                            rows="1"
+                            placeholder="Message"
+                            className="w-full bg-transparent border-b border-white/20 py-4 text-white placeholder-text-muted focus:outline-none focus:border-white transition-colors resize-none"
+                            onInput={(e) => {
+                                e.target.style.height = 'auto';
+                                e.target.style.height = e.target.scrollHeight + 'px';
+                            }}
                         ></textarea>
                     </div>
 
-                    <button
-                        type="submit"
-                        disabled={status === 'sending'}
-                        className="w-full py-4 bg-accent text-primary font-bold rounded-lg hover:bg-accent/90 transition-colors flex items-center justify-center gap-2 disabled:opacity-70"
-                    >
-                        {status === 'sending' ? 'Sending...' : (
-                            <>
-                                Send Message <Send size={18} />
-                            </>
-                        )}
-                    </button>
-
-                    {status === 'success' && (
-                        <p className="text-green-400 text-center mt-4">Message sent successfully!</p>
-                    )}
-                    {status === 'error' && (
-                        <p className="text-red-400 text-center mt-4">Something went wrong. Please try again.</p>
-                    )}
-                </motion.form>
+                    <div className="flex items-center justify-between pt-4">
+                        <button
+                            type="submit"
+                            disabled={status === 'sending'}
+                            className="text-lg font-medium hover:text-text-muted transition-colors disabled:opacity-50"
+                        >
+                            {status === 'sending' ? 'Sending...' : 'Send Message ->'}
+                        </button>
+                        {status === 'success' && <span className="text-green-500 text-sm">Sent successfully.</span>}
+                        {status === 'error' && <span className="text-red-500 text-sm">Error sending.</span>}
+                    </div>
+                </form>
             </div>
         </section>
     );

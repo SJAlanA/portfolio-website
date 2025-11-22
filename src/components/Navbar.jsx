@@ -1,81 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { Github, Linkedin, Mail, Code, FileText } from 'lucide-react';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
     const navLinks = [
-        { name: 'Home', href: '#' },
         { name: 'Projects', href: '#projects' },
         { name: 'About', href: '#about' },
+        { name: 'Articles', href: '#blog' },
         { name: 'Contact', href: '#contact' },
     ];
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-primary/80 backdrop-blur-md py-4' : 'bg-transparent py-6'}`}>
-            <div className="container mx-auto px-6 flex justify-between items-center">
-                <a href="#" className="text-2xl font-bold text-white tracking-tighter">
-                    PORTFOLIO<span className="text-accent">.</span>
-                </a>
-
-                {/* Desktop Menu */}
-                <div className="hidden md:flex space-x-8">
-                    {navLinks.map((link) => (
-                        <a
-                            key={link.name}
-                            href={link.href}
-                            className="text-gray-300 hover:text-accent transition-colors text-sm font-medium tracking-wide"
-                        >
-                            {link.name}
-                        </a>
-                    ))}
-                </div>
-
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-white focus:outline-none"
-                    onClick={() => setIsOpen(!isOpen)}
-                >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
+        <div className="h-full flex flex-col">
+            {/* Header / Logo Area */}
+            <div className="mb-12">
+                <h1 className="text-4xl font-bold tracking-tighter mb-2">
+                    Sahai Jordi Alan
+                </h1>
+                <p className="text-text-muted text-lg font-light">
+                    Automotive Cybersecurity Engineer
+                </p>
             </div>
 
-            {/* Mobile Full Screen Menu */}
-            <AnimatePresence>
-                {isOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="fixed inset-0 bg-primary z-40 flex flex-col items-center justify-center md:hidden"
+            {/* Navigation Links */}
+            <nav className="flex-grow flex flex-col justify-center space-y-6">
+                {navLinks.map((link) => (
+                    <a
+                        key={link.name}
+                        href={link.href}
+                        className="text-2xl font-medium text-text-muted hover:text-white transition-colors w-fit group flex items-center"
                     >
-                        <div className="flex flex-col space-y-8 text-center">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-3xl font-bold text-white hover:text-accent transition-colors"
-                                    onClick={() => setIsOpen(false)}
-                                >
-                                    {link.name}
-                                </a>
-                            ))}
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </nav>
+                        <span className="w-0 group-hover:w-4 transition-all duration-300 h-[1px] bg-white mr-0 group-hover:mr-3"></span>
+                        {link.name}
+                    </a>
+                ))}
+            </nav>
+
+            {/* Social Icons */}
+            <div className="mt-12 flex gap-6">
+                <SocialLink href="mailto:sahaijordialan@gmail.com" icon={<Mail size={20} />} label="Email" />
+                <SocialLink href="https://www.linkedin.com/in/sahaijordialana" icon={<Linkedin size={20} />} label="LinkedIn" />
+                <SocialLink href="https://github.com/SJAlanA" icon={<Github size={20} />} label="GitHub" />
+                <SocialLink href="https://leetcode.com/u/Sahai-Jordi-Alan-A/" icon={<Code size={20} />} label="LeetCode" />
+                <SocialLink href="https://drive.google.com/file/d/1f9gPugeFlgaCjzuxUeYraI-qZHg1OKZX/view?usp=sharing" icon={<FileText size={20} />} label="Resume" />
+            </div>
+        </div>
     );
 };
+
+const SocialLink = ({ href, icon, label }) => (
+    <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-text-muted hover:text-white transition-colors"
+        aria-label={label}
+    >
+        {icon}
+    </a>
+);
 
 export default Navbar;
