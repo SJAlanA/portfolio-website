@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - new-portfolio
 
 permissions:
   contents: read
