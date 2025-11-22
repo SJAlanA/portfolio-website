@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Sahai Jordi Alan - Automotive Cybersecurity Engineer & Penetration Tester" />
+  <title>SJ Alan | Professional Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="favi.ico" />
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+          <a href="#home" class="nav__logo">SJA</a>
+            <div class="nav__menu">
+                <ul class="nav__list">
+                    <li><a href="#home" class="nav__link active">Home</a></li>
+                    <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                    <li><a href="#blog" class="nav__link">Blog</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle">
+                <div class="hamburger"></div>
+            </div>
+        </nav>
+    </header>
+    
+      <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+          <div class="home__container container grid">
+            <div class="home__content">
+              <h1 class="home__title">Sahai Jordi Alan</h1>
+              <h2 class="home__subtitle">Automotive Cybersecurity Engineer</h2>
+              <p class="home__description">Hacking hardware is a fun thing to do</p>
+              <div class="home__buttons">
+                <a href="#portfolio" class="button button--primary">View Work</a>
+                <a href="#contact" class="button button--secondary">Hire Me</a>
+              </div>
+              <!-- Social Icons in Home Section -->
+              <div class="home__social">
+                <ul class="social-icons">
+                  <li>
+                    <a href="mailto:sahaijordialan@gmail.com" target="_blank" aria-label="Mail">
+                      <i class="fa-solid fa-envelope"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/sahaijordialana" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/SJAlanA" target="_blank" aria-label="GitHub">
+                      <i class="fab fa-github"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://leetcode.com/u/Sahai-Jordi-Alan-A/" target="_blank" aria-label="LeetCode">
+                      <i class="fa-solid fa-code"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://drive.google.com/file/d/14SyyiRn4AGiqhnMCMyK0d3XzGwkWLtFC/view?usp=sharing">
+                      <i class="fa-solid fa-file"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="container">
+                <h2 class="section__title">Featured Projects</h2>
+                <div class="portfolio__grid">
+                    <!-- Project items will be dynamically loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section__title">Latest Articles</h2>
+                <div class="blog__grid">
+                    <!-- Blog posts will be dynamically loaded via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container grid">
+                <div class="about__image"></div>
+                <div class="about__content">
+                    <h2 class="section__title">About Me</h2>
+                    <p class="about__description">
+                        👋 Hi there! I'm Sahai Jordi Alan, an Electronics and Communication Engineering student at the College of Engineering, Guindy, with a strong passion for technology, cybersecurity, and innovation. 
+                        <br>
+                        <br>
+                        💻 As a Cyber Security Enginer at Tata Elxsi, where I am gaining hands-on experience in network protocols, reverse engineering and key programming languages like Python, C, ARM Assembly, and Bash.
+                        <br>
+                        <br>
+                        🚀 As the Projects Student Director at CEG Tech Forum, I’ve led over 150 students, managing 14+ projects and organizing Kurukshetra, an international techno-management fest. I thrive in collaborative, agile environments, turning ideas into impactful solutions.
+                    </p>
+                    <br>
+                    <div class="skills__container">
+                        <!-- Skills will be dynamically loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section__title">Get in Touch</h2>
+                <form class="contact__form" name="submit-to-google-sheet">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Name" name='Name' required>
+                    </div>
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email" name='Email' required>
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__input form__textarea" placeholder="Message" name='Message' required></textarea>
+                    </div>
+                    <button type="submit" class="button button--primary">Send Message</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__copy">&copy; 2025 Sahai Jordi Alan. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

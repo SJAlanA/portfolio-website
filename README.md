@@ -1,36 +1,16 @@
-# Sahai Jordi Alan Portfolio
+# React + Vite
 
-This repository contains a responsive portfolio website for **Sahai Jordi Alan** (myself), Automotive Cybersecurity Engineer & Penetration Tester. The website showcases my projects, blog posts, skills, and contact information with a modern design, dynamic content, and smooth user interactions.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Website - [Portfolio Website](https://sjalana.github.io/portfolio-website/)
+Currently, two official plugins are available:
 
-## Table of Contents
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Contact](#contact)
+## React Compiler
 
-## Features
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **Responsive Design:** Works seamlessly on desktop, tablet, and mobile devices.
-- **Dynamic Content Loading:** Uses JavaScript to dynamically load blog posts, projects, and skills.
-- **Hamburger Menu:** Mobile-friendly navigation that transforms into a hamburger menu on smaller screens.
-- **Smooth Scrolling:** Smooth scrolling for a polished navigation experience.
-- **Social Media Integration:** Includes social icons for Mail, LinkedIn, GitHub, LeetCode, and a link to your resume.
-- **Contact Form:** Integrated contact form that submits data to a Google Sheet via a Google Apps Script endpoint.
+## Expanding the ESLint configuration
 
-## Technologies Used
-
-- **HTML5:** Semantic markup for content structure.
-- **CSS3:** Custom styling with CSS variables for theme management.
-- **JavaScript:** DOM manipulation and event handling for dynamic content and interactions.
-- **Font Awesome:** Icon library for social and other icons.
-- **Google Fonts:** Uses the "Inter" font for a modern look.
-- **Google Apps Script:** For handling contact form submissions to Google Sheets.
-
-## Contact
-
-For any inquiries or further information, please feel free to reach out:
-
-- **Email:** [sahaijordialan@gmail.com](mailto:sahaijordialan@gmail.com)
-- **LinkedIn:** [Sahai Jordi Alan](https://www.linkedin.com/in/sahaijordialana)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
