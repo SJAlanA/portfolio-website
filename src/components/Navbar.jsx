@@ -17,7 +17,7 @@ const Navbar = () => {
                     Sahai Jordi Alan
                 </h1>
                 <p className="text-text-muted text-lg font-light">
-                    Automotive Cybersecurity Engineer
+                    Product-minded Engineer
                 </p>
             </div>
 
