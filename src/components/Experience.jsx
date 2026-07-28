@@ -16,7 +16,7 @@ const Experience = () => (
       <div className="flex flex-col gap-12">
         {experience.map((item, i) => (
           <motion.article
-            key={item.org}
+            key={`${item.org}-${item.period}`}
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}

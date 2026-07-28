@@ -2,8 +2,9 @@
  * Single source of truth for every piece of copy on the site.
  * Edit here; the components read from this file and nothing else.
  *
- * Keep `metrics` and `intro` consistent with the dates in `experience`.
- * They restate the same facts and are easy to leave stale.
+ * Figures here are taken from Sahai_Jordi_Alan_Resume.pdf. Keep `metrics` and
+ * `intro` consistent with `experience`, and keep all three consistent with the
+ * resume itself, since recruiters read them side by side.
  */
 
 export const profile = {
@@ -18,7 +19,7 @@ export const profile = {
   headline: 'I get hard engineering work across the finish line.',
 
   intro:
-    'Automotive cybersecurity engineer turned program leader. I spent eighteen months breaking and hardening vehicle systems at Tata Elxsi, and led a 150-engineer student organization through 14+ concurrent projects before that. Now at Cornell, building the management toolkit to run technical programs at scale.',
+    'Automotive cybersecurity engineer turned program leader. Two years at Tata Elxsi validating in-vehicle systems, automating ECU diagnostics, and mentoring the engineers who came in behind me, after leading 100+ students across 10+ projects at CEG Tech Forum. Now at Cornell, building the management toolkit to run technical programs at scale.',
 
   email: 'sahaijordialan@gmail.com',
   links: {
@@ -35,9 +36,9 @@ export const profile = {
 };
 
 export const metrics = [
-  { value: '150+', label: 'Engineers led', detail: 'CEG Tech Forum' },
-  { value: '14+', label: 'Projects delivered', detail: 'Concurrent portfolio' },
-  { value: '18 mo', label: 'Automotive security', detail: 'Tata Elxsi' },
+  { value: '2 yrs', label: 'Automotive security', detail: 'Tata Elxsi' },
+  { value: '100+', label: 'Students led', detail: 'CEG Tech Forum' },
+  { value: '50%', label: 'Manual effort removed', detail: 'ECU diagnostics' },
   { value: 'Cornell', label: 'M.Eng, Engineering Mgmt', detail: 'Class of 2027' },
 ];
 
@@ -57,39 +58,54 @@ export const experience = [
   },
   {
     org: 'Tata Elxsi',
-    role: 'Cybersecurity Engineer, Automotive',
+    role: 'Automotive Cybersecurity Engineer',
     period: 'Dec 2024 – May 2026',
+    place: 'Bengaluru, India',
+    summary:
+      'Security validation and hardening of in-vehicle systems for automotive OEM programs. This is the work that taught me how technical risk actually gets prioritized and shipped.',
+    points: [
+      'Mentored and trained incoming interns on automotive cybersecurity practices, technical workflows, and corporate process, accelerating onboarding and getting them contributing sooner.',
+      'Automated ECU diagnostic workflows in Python, reducing manual intervention by over 50% and improving testing efficiency.',
+      'Coordinated cybersecurity validation for infotainment and telematics ECUs, managing structured test plans across secure boot, secure communication, and access control.',
+      'Analyzed ECU firmware and diagnostic security mechanisms to identify system-level vulnerabilities and improve workflows.',
+      'Validated intrusion detection for infotainment systems through structured penetration testing and adversarial scenarios.',
+    ],
+    tags: ['Mentorship', 'Test Planning', 'Workflow Automation'],
+  },
+  {
+    org: 'Tata Elxsi',
+    role: 'Cybersecurity Trainee',
+    period: 'Jan 2024 – Jun 2024',
     place: 'Chennai, India',
     summary:
-      'Security assessment and hardening of in-vehicle systems for automotive OEM programs. This is the work that taught me how technical risk actually gets prioritized and shipped.',
+      'Six months embedded with the automotive security team while finishing my degree, which turned into the full-time role.',
     points: [
-      'Ran security assessments on automotive ECUs and in-vehicle networks: protocol analysis, firmware reverse engineering, and vulnerability triage.',
-      'Translated raw findings into prioritized, developer-ready remediation plans, and drove them to closure with engineering teams and OEM stakeholders.',
-      'Built Python and Bash tooling that removed repetitive work from the assessment cycle, shortening turnaround on each engagement.',
+      'Developed Python and C automation tools that cut manual tasks by 20% and saved 25+ engineering hours per month.',
+      'Ran security testing and simulated attack scenarios on automotive communication systems, including key fob and TPMS functionality, to support vulnerability analysis and system validation.',
     ],
-    tags: ['Reverse Engineering', 'Threat Modeling', 'Stakeholder Management'],
+    tags: ['Python', 'C', 'Vulnerability Analysis'],
   },
   {
     org: 'CEG Tech Forum',
-    role: 'Projects & Research Student Director',
-    period: '2023 – 2024',
+    role: 'Projects Student Director',
+    period: 'Jul 2023 – May 2024',
     place: 'College of Engineering, Guindy',
     summary:
       'Elected to run the projects vertical of CEG’s flagship student engineering body. My first real experience owning a portfolio rather than a task.',
     points: [
-      'Led 150+ student engineers across a portfolio of 14+ concurrent projects, from proposal through public demo.',
-      'Designed the intake, review, and mentorship process that matched students to teams and kept blocked projects moving.',
-      'Ran the projects & research track for Kurukshetra, CEG’s international techno-management festival.',
+      'Led and mentored 100+ students across 10+ technical projects, coordinating execution, timelines, collaboration, and knowledge sharing across multidisciplinary teams.',
+      'Promoted project-based learning initiatives across the college, driving multidisciplinary innovation and hands-on technical development.',
+      'Organized events for Kurukshetra, an international techno-management festival, managing logistics, operations, and cross-functional coordination.',
     ],
     tags: ['Team Leadership', 'Portfolio Management', 'Mentorship'],
   },
   {
     org: 'College of Engineering, Guindy · Anna University',
     role: 'B.E. Electronics & Communication Engineering',
-    period: '2020 – 2024',
+    period: '2020 – Jun 2024',
     place: 'Chennai, India',
     summary:
-      'Embedded systems, signals, and networks: the foundation everything since has been built on.',
+      'Embedded systems, signals, and networks: the foundation everything since has been built on. GPA 8.53/10.',
     points: [],
     tags: ['Embedded Systems', 'Networks', 'Signal Processing'],
   },
@@ -102,10 +118,32 @@ export const work = [
     context:
       'CEG’s international techno-management festival, with a projects vertical that had to be planned, staffed, and delivered against a hard event date.',
     action:
-      'Owned the track end to end: scoped the project slate, recruited and assigned student teams, set review checkpoints, and coordinated across the organizing committee.',
+      'Organized the projects events end to end, managing logistics, operations, and cross-functional coordination across the organizing committee.',
     outcome:
-      'Delivered the full slate on schedule at an international-scale event, with 150+ engineers coordinated across parallel workstreams.',
+      'Delivered on schedule at an international-scale event, drawing on the 100+ students and 10+ projects I was coordinating across the Forum.',
     tags: ['Program Management', 'Cross-team Coordination', 'Event Delivery'],
+  },
+  {
+    kind: 'Engineering',
+    title: 'Automotive Vehicle Binary Analyzer',
+    context:
+      'Firmware analysis on vehicle binary (VBF) files was manual and slow, and integrity checks were easy to get wrong by hand.',
+    action:
+      'Built a Python parser that extracts firmware metadata, memory sections, and integrity information, then implemented CRC validation and LZSS decompression on top of it.',
+    outcome:
+      'Turned ad-hoc firmware inspection into a repeatable, verifiable workflow for secure firmware analysis.',
+    tags: ['Python', 'Firmware Analysis', 'CRC · LZSS'],
+  },
+  {
+    kind: 'Engineering',
+    title: 'Manhole Scavenging Robot',
+    context:
+      'A safety problem with a human cost: manual scavenging in confined, hazardous spaces.',
+    action:
+      'Built an embedded obstacle-detection system using current sensors to cut motors on impact, with PID-based motor control for encoder precision and system stability.',
+    outcome:
+      'Working prototype that improved operational safety and removed the need for a person to enter the space to assess load.',
+    tags: ['C', 'Embedded', 'PID Control'],
   },
   {
     kind: 'Engineering',
@@ -116,28 +154,6 @@ export const work = [
       'Built and trained a CNN-based detection pipeline in Python with OpenCV, tuning against the precision/recall tradeoff that matters for an alerting system.',
     outcome: 'Achieved 89.73% AUC on real-time accident detection.',
     tags: ['Python', 'CNN', 'OpenCV'],
-  },
-  {
-    kind: 'Engineering',
-    title: 'Manhole Scavenging Robot',
-    context:
-      'A safety problem with a human cost: manual scavenging in confined, hazardous spaces.',
-    action:
-      'Designed a load-detection system on Arduino in C, with PID control governing the actuation loop.',
-    outcome:
-      'Working prototype that removed the need for a person to enter the space to assess load.',
-    tags: ['C', 'Arduino', 'PID Control'],
-  },
-  {
-    kind: 'Engineering',
-    title: 'Agri Spraying Drone',
-    context:
-      'Precision spraying for smallholder farms, where operator time is the binding constraint.',
-    action:
-      'Integrated sensors and an ESP8266 control stack with OpenCV-based targeting, plus an auto-docking routine for unattended cycles.',
-    outcome:
-      'Automated spray runs with auto-docking, cutting the manual supervision each cycle required.',
-    tags: ['Python', 'OpenCV', 'ESP8266'],
   },
 ];
 
@@ -151,8 +167,8 @@ export const approach = [
     body: 'Security taught me that a finding nobody prioritizes is a finding nobody fixes. I work in prioritized, owned, dated lists, and I follow them to zero.',
   },
   {
-    title: 'Process exists to unblock people',
-    body: 'At CEG Tech Forum the only process that survived was the process that got teams unstuck. I add ceremony when it removes friction and cut it the moment it stops.',
+    title: 'Automate the work nobody should be doing',
+    body: 'Half the manual effort in our diagnostic workflow was there by habit, not necessity. Finding that kind of waste and removing it is the cheapest throughput a team ever gets.',
   },
 ];
 
@@ -160,27 +176,27 @@ export const capabilities = [
   {
     group: 'Management & Delivery',
     items: [
-      'Program & project management',
-      'Cross-functional stakeholder management',
-      'Roadmapping & prioritization',
-      'Risk assessment & mitigation',
-      'Team leadership & mentorship',
+      'Program & project coordination',
+      'Cross-functional stakeholder communication',
+      'Test planning & validation',
+      'Mentorship & onboarding',
+      'Process improvement',
+      'Requirements management (DOORS)',
+      'Jira · Git',
       'Agile delivery',
-      'Technical requirements & specs',
-      'Vendor & OEM coordination',
     ],
   },
   {
     group: 'Technical Foundation',
     items: [
-      'Automotive & embedded security',
+      'Python · C/C++ · Bash',
+      'CAN · LIN · UDS · XCP · FlexRay',
+      'Automotive Ethernet · TCP/IP · TLS',
+      'CANoe · Wireshark',
       'Reverse engineering',
-      'Penetration testing · OWASP Top 10',
-      'MITRE ATT&CK',
-      'Network protocols',
-      'Python · C/C++ · SQL',
-      'ARM Assembly · Bash',
-      'Machine learning (CNNs, OpenCV)',
+      'OWASP Top 10 · MITRE ATT&CK',
+      'Intrusion detection & log analysis',
+      'Linux · Android Debugger',
     ],
   },
 ];
@@ -190,7 +206,7 @@ export const writing = [
     title: 'Leading the projects vertical at CEG Tech Forum as Student Director',
     date: 'July 2024',
     blurb:
-      'What running 14+ concurrent student projects taught me about scoping, staffing, and saying no.',
+      'What running 10+ concurrent student projects taught me about scoping, staffing, and saying no.',
     link: 'https://www.linkedin.com/posts/sahaijordialana_projects-cegtechforum-kurukshetra-activity-7198382442422951937-2-xW',
   },
   {
