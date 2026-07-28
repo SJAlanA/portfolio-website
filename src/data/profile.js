@@ -30,9 +30,17 @@ export const profile = {
       'https://drive.google.com/file/d/1Bkg-3KmO09vgvzi9BP00C_czUkYaRg3L/view?usp=sharing',
   },
 
-  // Google Apps Script endpoint carried over from the previous site.
-  contactEndpoint:
-    'https://script.google.com/macros/s/AKfycbxh3mHTAo0_w78BDUEfcdUqdUhWMx0B9ecqTth-Pe7x857g92k_s_FITmKd0gCtoEi35Q/exec',
+  // Where the contact form POSTs. Leave `contactEndpoint` empty and the form
+  // composes a prefilled mailto instead, which needs no backend at all.
+  //
+  // Replaced the old Google Apps Script endpoint, which returned 403 "You need
+  // access" as of 2026-07-28 and had been failing every submission.
+  //
+  // The access key is public by design: Web3Forms keys live in client-side
+  // code and are visible in the built bundle. It only permits sending to the
+  // inbox it is registered against. Rotate it at web3forms.com if it is abused.
+  contactEndpoint: 'https://api.web3forms.com/submit',
+  contactAccessKey: '434b1c42-4a2b-4667-b8ad-07b38de0ac61',
 };
 
 export const metrics = [

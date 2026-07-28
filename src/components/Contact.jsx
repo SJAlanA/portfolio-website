@@ -1,24 +1,87 @@
 import React, { useState } from 'react';
-import { Mail, Linkedin, Github, Code2, FileText } from 'lucide-react';
+import { Mail, Linkedin, Github, Code2, FileText, ArrowUpRight } from 'lucide-react';
 import Section from './Section';
 import { profile } from '../data/profile';
 
+/**
+ * Builds a prefilled mailto: from whatever the visitor typed. This is the
+ * safety net: if the submit endpoint is unset or fails, their message is
+ * handed straight to their mail client rather than lost.
+ */
+const buildMailto = ({ name, email, message }) => {
+  const subject = `Portfolio enquiry${name ? ` from ${name}` : ''}`;
+  const body = [message, '', '---', `From: ${name}`, `Reply to: ${email}`]
+    .filter((line) => line !== undefined)
+    .join('\n');
+  return `mailto:${profile.email}?subject=${encodeURIComponent(
+    subject
+  )}&body=${encodeURIComponent(body)}`;
+};
+
 const Contact = () => {
   const [status, setStatus] = useState('');
+  const [fallback, setFallback] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus('sending');
     const form = e.target;
     const data = new FormData(form);
 
+    // Honeypot. Web3Forms also rejects any submission with `botcheck` set,
+    // so this is blocked client-side and server-side both.
+    if (data.get('botcheck')) return;
+
+    const fields = {
+      name: data.get('name'),
+      email: data.get('email'),
+      message: data.get('message'),
+    };
+    const mailto = buildMailto(fields);
+
+    // No endpoint configured: go straight to the visitor's mail client.
+    if (!profile.contactEndpoint) {
+      setFallback(mailto);
+      setStatus('mailto');
+      window.location.href = mailto;
+      return;
+    }
+
+    if (profile.contactAccessKey) {
+      data.append('access_key', profile.contactAccessKey);
+    }
+    data.append(
+      'subject',
+      `Portfolio enquiry${fields.name ? ` from ${fields.name}` : ''}`
+    );
+
+    setStatus('sending');
     try {
-      await fetch(profile.contactEndpoint, { method: 'POST', body: data });
+      const res = await fetch(profile.contactEndpoint, {
+        method: 'POST',
+        body: data,
+      });
+
+      let payload = null;
+      try {
+        payload = await res.json();
+      } catch {
+        // Non-JSON response; treated as a failure below.
+      }
+
+      // Never report success on an unverified response. The previous version
+      // resolved on any fetch that did not throw, which reported "Sent" for
+      // submissions the endpoint had actually rejected. Web3Forms returns 200
+      // with success:false for some rejections, so check both.
+      if (!res.ok || !payload?.success) {
+        throw new Error(payload?.message || `Endpoint returned ${res.status}`);
+      }
+
       setStatus('success');
       form.reset();
-      setTimeout(() => setStatus(''), 6000);
+      setTimeout(() => setStatus(''), 8000);
     } catch (error) {
-      console.error('Contact form error:', error.message);
+      console.error('Contact form submit failed:', error.message);
+      setFallback(mailto);
       setStatus('error');
     }
   };
@@ -33,8 +96,8 @@ const Contact = () => {
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid gap-6 sm:grid-cols-2">
-            <Field name="Name" label="Name" type="text" />
-            <Field name="Email" label="Email" type="email" />
+            <Field name="name" label="Name" type="text" />
+            <Field name="email" label="Email" type="email" />
           </div>
 
           <div>
@@ -46,11 +109,25 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
-              name="Message"
+              name="message"
               required
               rows="4"
               placeholder="Role, team, and what you’re trying to get done."
               className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none transition-colors resize-y"
+            />
+          </div>
+
+          {/* Honeypot. Hidden from sighted users and assistive tech alike.
+              `botcheck` is Web3Forms' convention, so it is rejected server-side
+              too rather than relying on the client check alone. */}
+          <div className="hidden" aria-hidden="true">
+            <label htmlFor="botcheck">Leave this field empty</label>
+            <input
+              id="botcheck"
+              name="botcheck"
+              type="text"
+              tabIndex={-1}
+              autoComplete="off"
             />
           </div>
 
@@ -68,9 +145,23 @@ const Contact = () => {
                 Sent. I’ll get back to you shortly.
               </span>
             )}
+
+            {status === 'mailto' && (
+              <span className="text-sm text-muted">
+                Opening your mail app.{' '}
+                <a href={fallback} className="text-accent underline">
+                  Nothing happened?
+                </a>
+              </span>
+            )}
+
             {status === 'error' && (
-              <span className="text-sm text-red-500">
-                Something broke. Email me directly at {profile.email}.
+              <span className="text-sm text-muted">
+                That didn’t go through.{' '}
+                <a href={fallback} className="text-accent underline">
+                  Send it by email instead
+                </a>{' '}
+                — your message is already filled in.
               </span>
             )}
           </div>
@@ -135,6 +226,7 @@ const Field = ({ name, label, type }) => (
       type={type}
       name={name}
       required
+      autoComplete={type === 'email' ? 'email' : 'name'}
       className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none transition-colors"
     />
   </div>
@@ -152,7 +244,10 @@ const Elsewhere = ({ href, icon, label, value, external }) => (
       </span>
       {label}
     </span>
-    <span className="font-mono text-xs text-muted truncate">{value}</span>
+    <span className="flex items-center gap-1 font-mono text-xs text-muted truncate">
+      {value}
+      {external && <ArrowUpRight size={12} className="shrink-0" />}
+    </span>
   </a>
 );
 
