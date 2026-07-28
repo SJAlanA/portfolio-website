@@ -28,7 +28,7 @@ const Contact = () => {
       id="contact"
       label="Contact"
       title="Hiring for an engineering or program role in 2027?"
-      lead="I'd like to hear about it, especially if it sits where deep technical work meets delivery. I reply to everything."
+      lead="I’d like to hear about it, especially if it sits where deep technical work meets delivery. I reply to everything."
     >
       <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -49,7 +49,7 @@ const Contact = () => {
               name="Message"
               required
               rows="4"
-              placeholder="Role, team, and what you're trying to get done."
+              placeholder="Role, team, and what you’re trying to get done."
               className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none transition-colors resize-y"
             />
           </div>
@@ -65,7 +65,7 @@ const Contact = () => {
 
             {status === 'success' && (
               <span className="text-sm text-accent">
-                Sent. I'll get back to you shortly.
+                Sent. I’ll get back to you shortly.
               </span>
             )}
             {status === 'error' && (
