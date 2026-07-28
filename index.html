@@ -4,7 +4,47 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sahai Jordi Alan | Automotive Cybersecurity Engineer</title>
+    <meta name="theme-color" content="#faf9f7" />
+
+    <title>Sahai Jordi Alan | Engineering &amp; Program Management</title>
+    <meta
+      name="description"
+      content="Engineering and program management. Automotive cybersecurity engineer at Tata Elxsi, former Projects Director leading 150+ engineers at CEG Tech Forum, Cornell M.Eng Engineering Management '27."
+    />
+    <meta name="author" content="Sahai Jordi Alan" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Sahai Jordi Alan | Engineering &amp; Program Management"
+    />
+    <meta
+      property="og:description"
+      content="Automotive cybersecurity engineer turned program leader. Cornell M.Eng Engineering Management '27, recruiting for full-time engineering and program management roles."
+    />
+    <meta
+      property="og:url"
+      content="https://sjalana.github.io/portfolio-website/"
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Apply the stored theme before first paint so there is no flash. -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia(
+            '(prefers-color-scheme: dark)'
+          ).matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

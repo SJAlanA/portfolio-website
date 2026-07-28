@@ -1,33 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+/* Class-based dark mode so the toggle wins over the OS preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Palette lives in plain custom properties so it can flip at runtime;
+   @theme maps Tailwind's color utilities onto them. */
+:root {
+  --canvas: #faf9f7;
+  --surface: #ffffff;
+  --surface-alt: #f2f0ec;
+  --ink: #14171a;
+  --muted: #5c6470;
+  --line: rgb(20 23 26 / 0.12);
+  --accent: #0f5c57;
+  --accent-ink: #ffffff;
+  --accent-soft: rgb(15 92 87 / 0.09);
+}
+
+.dark {
+  --canvas: #0a0c0e;
+  --surface: #121518;
+  --surface-alt: #181c20;
+  --ink: #f1f3f5;
+  --muted: #97a0aa;
+  --line: rgb(255 255 255 / 0.12);
+  --accent: #5ed9cc;
+  --accent-ink: #06201e;
+  --accent-soft: rgb(94 217 204 / 0.12);
+}
 
 @theme {
-  --color-primary: #000000;
-  --color-secondary: #111111;
-  --color-accent: #ffffff;
-  --color-text-muted: #888888;
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-alt: var(--surface-alt);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset for the sticky header when jumping to an anchor. */
+  scroll-padding-top: 6rem;
 }
 
 body {
-  background-color: var(--color-primary);
-  color: var(--color-accent);
+  background-color: var(--canvas);
+  color: var(--ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 ::selection {
-  background-color: var(--color-accent);
-  color: var(--color-primary);
+  background-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
