@@ -135,6 +135,17 @@ export const experience = [
 
 export const work = [
   {
+    kind: 'Product',
+    title: 'FIGORO: Group Hangout Planning App',
+    context:
+      'Planning a night out with friends stalls on scheduling, venue debates, and who owes whom, and Gen Z groups tend to give up and stay home.',
+    action:
+      'With a four-person team, developed FIGORO as a startup concept for a Cornell course: availability matching, venue recommendations, group decisions, and cost splitting. Backed it with a Five Forces analysis, a business model, and customer profiles.',
+    outcome:
+      'A defined product concept and business case, worked out with the team on a shared Miro board.',
+    tags: ['Product Strategy', 'Business Model', 'Customer Research'],
+  },
+  {
     kind: 'Automation',
     title: 'TA Email Triage and Routing System',
     context:
