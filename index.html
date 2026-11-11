@@ -1,53 +1,532 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#faf9f7" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>S J Alan Anbu Kulandainathan | Engineering &amp; Program Management</title>
+<meta name="description" content="Engineering and program management, from mid-2027. Cornell M.Eng Engineering Management ’27. Two years of automotive cybersecurity at Tata Elxsi for Jaguar Land Rover and Marelli. Led 150+ students at CEG Tech Forum.">
+<meta name="author" content="S J Alan Anbu Kulandainathan">
+<meta name="theme-color" content="#0D0C0A">
+<meta property="og:type" content="website">
+<meta property="og:title" content="S J Alan Anbu Kulandainathan | Engineering &amp; Program Management">
+<meta property="og:description" content="Cornell M.Eng Engineering Management ’27, recruiting for full-time engineering and program management roles from mid-2027.">
+<meta property="og:url" content="https://sjalana.github.io/portfolio-website/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23F2C230'/><path d='M6 22 26 10' stroke='%230D0C0A' stroke-width='3'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Geist:wght@400..650&display=swap">
+<link rel="stylesheet" href="./src/scrollcraft.css">
+<link rel="stylesheet" href="./src/site.css">
+</head>
+<body>
 
-    <title>Sahai Jordi Alan | Engineering &amp; Program Management</title>
-    <meta
-      name="description"
-      content="Engineering and program management. Two years in automotive cybersecurity at Tata Elxsi, former Projects Student Director leading 100+ students at CEG Tech Forum, Cornell M.Eng Engineering Management '27."
-    />
-    <meta name="author" content="Sahai Jordi Alan" />
+<a class="skip" href="#ch1">Skip to Chapter One</a>
+<div class="sc-grain" aria-hidden="true"></div>
 
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="Sahai Jordi Alan | Engineering &amp; Program Management"
-    />
-    <meta
-      property="og:description"
-      content="Automotive cybersecurity engineer turned program leader. Cornell M.Eng Engineering Management '27, recruiting for full-time engineering and program management roles."
-    />
-    <meta
-      property="og:url"
-      content="https://sjalana.github.io/portfolio-website/"
-    />
-    <meta name="twitter:card" content="summary" />
+<!-- THE LIST: navigation, chapter folio and the signature move. -->
+<nav class="folio" id="folio" aria-label="Chapters">
+  <button class="folio__toggle" type="button" aria-expanded="false" aria-controls="folio-panel">
+    <span><span class="folio__ch" data-now-ch>The List</span><span class="folio__title" data-now-title>Opening</span></span>
+    <span class="marks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+  </button>
+  <p class="folio__now" aria-hidden="true"><span class="folio__ch" data-now-ch>The List</span><span class="folio__title" data-now-title>Opening</span></p>
+  <div class="folio__panel" id="folio-panel">
+    <p class="folio__head"><span class="folio__name">The List</span><span class="folio__tally"><span data-tally>0</span> of 5 crossed off</span></p>
+    <ol class="list">
+      <li data-item="1"><a href="#ch1"><span class="list__i">1</span><span class="list__txt"><b>Trained to run programs</b><small>Cornell MEM ’27</small><svg class="list__strike" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="7.5" x2="100" y2="2.5" pathLength="1"/></svg></span></a></li>
+      <li data-item="2"><a href="#ch2"><span class="list__i">2</span><span class="list__txt"><b>Shipped hard engineering</b><small>Tata Elxsi, for JLR and Marelli</small><svg class="list__strike" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="7.5" x2="100" y2="2.5" pathLength="1"/></svg></span></a></li>
+      <li data-item="3"><a href="#ch3"><span class="list__i">3</span><span class="list__txt"><b>Led people at scale</b><small>150+ students, 14+ projects</small><svg class="list__strike" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="7.5" x2="100" y2="2.5" pathLength="1"/></svg></span></a></li>
+      <li data-item="4"><a href="#ch4"><span class="list__i">4</span><span class="list__txt"><b>Builds things</b><small>Six projects, labelled</small><svg class="list__strike" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="7.5" x2="100" y2="2.5" pathLength="1"/></svg></span></a></li>
+      <li data-item="5"><a href="#contact"><span class="list__i">5</span><span class="list__txt"><b>Free from mid-2027</b><small>Open to relocation</small><svg class="list__strike" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="7.5" x2="100" y2="2.5" pathLength="1"/></svg></span></a></li>
+    </ol>
+  </div>
+</nav>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<main id="top">
 
-    <!-- Apply the stored theme before first paint so there is no flash. -->
-    <script>
-      (function () {
-        try {
-          var stored = localStorage.getItem('theme');
-          var prefersDark = window.matchMedia(
-            '(prefers-color-scheme: dark)'
-          ).matches;
-          if (stored === 'dark' || (!stored && prefersDark)) {
-            document.documentElement.classList.add('dark');
-          }
-        } catch (e) {}
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+  <!-- TITLE PAGE. Back plane: the outlined year. Mid: the name. Front: the
+       list card, which leaves this page and docks in the margin. -->
+  <header class="title" id="title">
+    <div class="title__ghost" aria-hidden="true">2027</div>
+    <div class="title__in">
+      <h1 class="disp title__name"><span>S J Alan Anbu</span><span>Kulandainathan</span></h1>
+      <figure class="title__photo">
+        <div class="title__frame"><img src="./src/assets/hero.jpg" width="1400" height="1866" alt="S J Alan Anbu Kulandainathan in a suit and tie on Cornell’s campus, with McGraw Tower in the background." fetchpriority="high" decoding="async"></div>
+        <figcaption>Cornell University, Ithaca</figcaption>
+      </figure>
+      <div class="title__copy">
+        <p class="title__lede">Engineering &amp; program management roles, from mid&#8209;2027.</p>
+        <p class="title__meta">Cornell M.Eng, Engineering Management ’27. Ithaca, NY, and open to relocation.</p>
+        <p class="title__links">
+          <a class="btn" href="mailto:sahaijordialan@gmail.com">Email me</a>
+          <a class="link-quiet" href="https://drive.google.com/file/d/15IskN5gDI7DLVEVsUZ1pJvz-WcJCo0FW/view?usp=sharing" target="_blank" rel="noopener">Résumé (PDF)</a>
+        </p>
+      </div>
+      <div class="title__slot" aria-hidden="true"></div>
+      <div class="title__list" aria-hidden="true">
+        <p class="folio__head"><span class="folio__name">The List</span><span class="folio__tally">What you’re checking for</span></p>
+        <ol class="list">
+          <li><span class="list__row"><span class="list__i">1</span><span class="list__txt"><b>Trained to run programs</b></span></span></li>
+          <li><span class="list__row"><span class="list__i">2</span><span class="list__txt"><b>Shipped hard engineering</b></span></span></li>
+          <li><span class="list__row"><span class="list__i">3</span><span class="list__txt"><b>Led people at scale</b></span></span></li>
+          <li><span class="list__row"><span class="list__i">4</span><span class="list__txt"><b>Builds things</b></span></span></li>
+          <li><span class="list__row"><span class="list__i">5</span><span class="list__txt"><b>Free from mid-2027</b></span></span></li>
+        </ol>
+      </div>
+    </div>
+  </header>
+
+  <!-- CHAPTER ONE: calm. flow + parallax inside the media column. -->
+  <section class="ch1" id="ch1" data-sc-act="flow" data-chapter="1" data-ch="Chapter One" data-title="The Student">
+    <div class="wrap ch1__grid">
+      <header data-sc-in>
+        <p class="ch-label">Chapter One</p>
+        <h2 class="disp disp--ch">The Student</h2>
+      </header>
+      <div class="ch1__body" data-sc-in data-sc-stagger="70">
+        <p class="lede">Cornell University, M.Eng in Engineering Management. Class of 2027.</p>
+        <p class="prose">I’m building the formal management layer on top of a hands-on engineering career: product strategy, operations, systems engineering and data-driven decision making. The engineering I already had. This year is about running it at scale.</p>
+        <dl class="facts">
+          <div><dt>When</dt><dd>Aug 2026 to May 2027</dd></div>
+          <div><dt>Coursework</dt><dd>Project Management, Applied AI for Teams, Decision Analysis, Data Analytics</dd></div>
+          <div><dt>Also</dt><dd>Student Assistant, Negotiations and Contracts (Fall 2026)</dd></div>
+        </dl>
+      </div>
+      <figure class="fig">
+        <div class="fig__frame"><img src="./src/assets/ch1-ithaca.jpg" width="1200" height="1600" alt="Alan beside a waterfall in a stone gorge in Ithaca, with a stone footbridge in the background." loading="lazy" decoding="async" data-sc-parallax="-1.1"></div>
+        <figcaption><span>Ithaca, New York</span></figcaption>
+      </figure>
+    </div>
+    <div class="wrap approach">
+      <h3>How I run work</h3>
+      <ol>
+        <li><b>Technical credibility, not technical control.</b><p class="prose">I can read the firmware and follow the protocol trace, so I can tell an optimistic estimate from a real one without taking the keyboard from the engineer who owns it.</p></li>
+        <li><b>Risk gets ranked, then it gets closed.</b><p class="prose">Security taught me that a finding nobody prioritizes is a finding nobody fixes. I work in prioritized, owned, dated lists, and I follow them to zero.</p></li>
+        <li><b>Automate the work nobody should be doing.</b><p class="prose">Half the manual effort in our diagnostic workflow was there by habit, not necessity. Removing that kind of waste is the cheapest throughput a team ever gets.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- THE CUT. The peak. Silence, a title card, a hairline across the whole
+       screen, the card splits along it, and yellow comes through. -->
+  <section class="cut" id="ch2" data-sc-act="pin" data-sc-span="3.6" data-chapter="2" data-ch="Chapter Two" data-title="The Engineer">
+    <div data-sc-stage class="cut__stage">
+      <div class="cut__under ground-y">
+        <div class="wrap cut__grid">
+          <figure class="cut__fig fig">
+            <div class="fig__frame"><img src="./src/assets/peak-ecu.jpg" width="1672" height="941" alt="An automotive electronic control unit open on a test bench, wired to a diagnostic harness under a single warm lamp." decoding="async"></div>
+            <figcaption><span>An ECU on the test bench</span><span>Illustrative image</span></figcaption>
+          </figure>
+          <div class="cut__copy" data-sc-cue="0.6 1 0.18 0.04">
+            <p class="ch-label">Tata Elxsi, Dec 2024 to May 2026</p>
+            <p class="disp disp--ch">Two years securing cars.</p>
+            <p class="lede">Automotive Cybersecurity Engineer. I owned security validation for infotainment and telematics ECUs on Jaguar Land Rover and Marelli vehicle programs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="cut__half cut__half--a">
+        <div class="cut__card">
+          <p class="ch-label">Chapter Two</p>
+          <h2 class="disp disp--card" data-sc-cue="0.05 0.64 0.1 0.1">The Engineer</h2>
+        </div>
+      </div>
+      <div class="cut__half cut__half--b" aria-hidden="true">
+        <div class="cut__card">
+          <p class="ch-label">Chapter Two</p>
+          <p class="disp disp--card" data-sc-cue="0.05 0.64 0.1 0.1">The Engineer</p>
+        </div>
+      </div>
+      <svg class="cut__line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="-1" y1="63.3" x2="101" y2="36.7" pathLength="1"/></svg>
+    </div>
+  </section>
+
+  <section class="ch2 ground-y" id="ch2-work" data-chapter-end="2">
+    <div class="wrap">
+      <p class="figure-line" aria-label="A manual test cycle cut from 240 minutes to 30 minutes">
+        <span class="from" aria-hidden="true">240</span><span class="arrow" aria-hidden="true">→</span><span aria-hidden="true" data-sc-count="240 30" data-sc-count-ms="1600">30</span><span class="unit" aria-hidden="true">minutes</span>
+      </p>
+      <div class="ch2__grid">
+        <p class="lede" data-sc-in>I automated the ECU diagnostic and UDS test workflows in Python. Each engineer’s manual cycle went from four hours to thirty minutes.</p>
+        <div class="ch2__points" data-sc-in data-sc-stagger="70">
+          <p class="prose">That freed roughly <b>17 engineer-hours per firmware drop</b> across a five-person validation team.</p>
+          <p class="prose">I ran penetration testing and firmware analysis on production ECU builds for Jaguar Land Rover and reported <b>5+ security findings</b>. <b>Two of them drove design changes</b> before release sign-off.</p>
+          <p class="prose">I ran the working sessions and daily status tracking between Marelli engineering, internal test and client stakeholders, and kept requirements coverage in IBM DOORS and defect closure in Jira, so every lead had one view of status against release gates.</p>
+          <p class="prose">I onboarded and mentored <b>3 interns and new engineers</b> and cut typical ramp-up from six weeks to two.</p>
+        </div>
+      </div>
+      <ul class="tags" aria-label="Skills"><li>Test planning</li><li>Workflow automation</li><li>Penetration testing</li><li>CAN · UDS · DOORS · Jira</li><li>Mentorship</li></ul>
+    </div>
+    <div class="wrap">
+      <div class="before">
+        <h3>Before that</h3>
+        <article>
+          <h4>Cybersecurity Intern, Tata Elxsi</h4>
+          <p class="when">Jan 2024 to Jun 2024, Chennai</p>
+          <p class="prose small">Built 2 Python and C tools for the ECU test bench, removing 25+ engineering hours of manual work a month. Ran simulated attacks against automotive communication stacks. The internship became the full-time role.</p>
+        </article>
+        <article>
+          <h4>Project Intern, CSIR-CEERI</h4>
+          <p class="when">Jul 2022 to Aug 2022, Chennai</p>
+          <p class="prose small">Built a driver drowsiness detection system in Python on live video, improving detection accuracy by over 40%, and an ECG sensor in C on Arduino feeding a Raspberry Pi for real-time driver monitoring.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER THREE: warmth. A hard cut back to black, and a wide wipe. -->
+  <section class="ch3" id="ch3" data-sc-act="flow" data-chapter="3" data-ch="Chapter Three" data-title="The Director">
+    <div class="wrap">
+      <header data-sc-in>
+        <p class="ch-label">Chapter Three</p>
+        <h2 class="disp disp--ch">The Director</h2>
+      </header>
+      <figure class="fig ch3__fig" style="margin-top: var(--sc-8)">
+        <div class="fig__frame" data-sc-reveal="left" data-sc-reveal-at="0.1 0.34"><img src="./src/assets/ch3-technovation.jpg" width="1800" height="1350" alt="Students gathered on the stage at Anna University under a banner for Technovation, an inter-college project competition." loading="lazy" decoding="async"></div>
+        <figcaption><span>Technovation, an inter-college project competition at Anna University</span></figcaption>
+      </figure>
+      <p class="scale-line"><em>150+</em> students. <em>14+</em> projects running at once. One festival of <em>1,000+</em>.</p>
+      <div class="ch3__grid">
+        <div class="ch3__body">
+          <p class="lede">Projects Student Director, CEG Tech Forum. Jul 2023 to May 2024.</p>
+          <p class="prose">Elected to run the projects vertical of CEG’s flagship student engineering body. My first real experience owning a portfolio rather than a task.</p>
+        </div>
+        <div class="ch3__body" data-sc-in data-sc-stagger="70">
+          <p class="prose">I directed <b>150+ students across 14+ concurrent projects</b>, owning scope, solution-design mentoring, milestone tracking and cross-team dependencies from kickoff to final demo.</p>
+          <p class="prose">I launched a project-based learning program with faculty buy-in and built its intake, review and mentorship process.</p>
+          <p class="prose">For <b>Kurukshetra</b>, CEG’s international techno-management festival, I ran logistics, event planning, finance and cross-functional coordination: <b>1,000+ participants across 20+ events</b>, delivered on schedule.</p>
+          <p class="prose small"><a href="https://www.linkedin.com/posts/sahaijordialana_projects-cegtechforum-kurukshetra-activity-7198382442422951937-2-xW" target="_blank" rel="noopener">What running 14+ projects taught me about scoping, staffing and saying no</a></p>
+        </div>
+      </div>
+      <div class="edu">
+        <p class="small" style="color: var(--sc-ink-soft)">Where it started</p>
+        <p>B.E. Electronics &amp; Communication Engineering, College of Engineering, Guindy, Anna University. 2020 to 2024. GPA 3.69 / 4.00.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAPTER FOUR: curiosity. Lateral travel through the work, one label
+       schema for every entry. -->
+  <section id="ch4" data-sc-act="pan" data-sc-span="3.4" data-chapter="4" data-ch="Chapter Four" data-title="The Builder" data-chapter-end="4">
+    <div data-sc-stage class="ch4__stage">
+      <div class="rail-clip"><div class="rail" data-sc-pan="0.04">
+        <div class="rail__lead">
+          <div>
+            <p class="ch-label">Chapter Four</p>
+            <h2 class="disp disp--ch">The Builder</h2>
+            <p class="prose">Six things I built or ran, each labelled the same way: the problem, what I did, what came of it.</p>
+          </div>
+        </div>
+        <article class="work" style="--i:1">
+          <p class="work__kind">Product</p>
+          <h3>FIGORO</h3>
+          <p class="work__sub">Group hangout planning app, Cornell</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Group plans stall on scheduling, venue debates and who owes whom, and groups give up and stay home.</dd></div>
+            <div><dt>What I did</dt><dd>With a four-person team, shaped a startup concept: availability matching, venue picks, group decisions, cost splitting. Backed by a Five Forces analysis, business model and customer profiles.</dd></div>
+            <div><dt>Result</dt><dd>A defined product concept and business case.</dd></div>
+          </dl>
+          <ul class="tags"><li>Product strategy</li><li>Business model</li></ul>
+        </article>
+        <article class="work" style="--i:2">
+          <p class="work__kind">Automation</p>
+          <h3>TA Triage</h3>
+          <p class="work__sub">Email triage and routing for a course inbox</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Grade disputes, content questions and logistics all land in one inbox, and each needs a different responder.</dd></div>
+            <div><dt>What I did</dt><dd>An n8n workflow that classifies each email with Claude and routes it to the professor, a TA or a syllabus-based reply, with a human gate for disputes and anything under 70% confidence.</dd></div>
+            <div><dt>Result</dt><dd>Routine questions answer themselves; anything sensitive reaches a person.</dd></div>
+          </dl>
+          <ul class="tags"><li>n8n</li><li>Claude API</li><li>Gmail API</li></ul>
+        </article>
+        <article class="work" style="--i:3">
+          <p class="work__kind">Program</p>
+          <h3>Spray Drone</h3>
+          <p class="work__sub">Autonomous agricultural spraying drone</p>
+          <dl>
+            <div><dt>Problem</dt><dd>A drone that sprays a farmer-defined perimeter and auto-docks, with mechanical, electronics and software landing together.</dd></div>
+            <div><dt>What I did</dt><dd>Team Lead for 16 people across three disciplines. Owned the budget and integration through daily standups, weekly mentor reviews and biweekly advisor checkpoints.</dd></div>
+            <div><dt>Result</dt><dd>Three disciplines integrating against one plan, with spend visible at every checkpoint.</dd></div>
+          </dl>
+          <ul class="tags"><li>Team leadership</li><li>Budget</li></ul>
+        </article>
+        <article class="work" style="--i:4">
+          <p class="work__kind">Engineering</p>
+          <h3>VBF Analyzer</h3>
+          <p class="work__sub">Automotive vehicle binary analyzer</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Firmware analysis on vehicle binary files was manual and slow, and integrity checks were easy to get wrong.</dd></div>
+            <div><dt>What I did</dt><dd>A Python parser that extracts firmware metadata, memory sections and integrity data, with CRC validation and LZSS decompression on top.</dd></div>
+            <div><dt>Result</dt><dd>A repeatable, verifiable firmware analysis workflow.</dd></div>
+          </dl>
+          <ul class="tags"><li>Python</li><li>CRC · LZSS</li></ul>
+        </article>
+        <article class="work" style="--i:5">
+          <p class="work__kind">Engineering</p>
+          <h3>Sewer Robot</h3>
+          <p class="work__sub">Manhole scavenging robot</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Manual scavenging puts people in confined, hazardous spaces.</dd></div>
+            <div><dt>What I did</dt><dd>Embedded obstacle detection with current sensors that cut the motors on impact, plus PID motor control for encoder precision and stability.</dd></div>
+            <div><dt>Result</dt><dd>A working prototype that removed the need for a person to enter the space to assess load.</dd></div>
+          </dl>
+          <ul class="tags"><li>C</li><li>Embedded</li><li>PID</li></ul>
+        </article>
+        <article class="work" style="--i:6">
+          <p class="work__kind">Engineering</p>
+          <h3>Crash Detect</h3>
+          <p class="work__sub">Road accident detection from video</p>
+          <dl>
+            <div><dt>Problem</dt><dd>Real-time accident detection, where false alarms cost as much as misses.</dd></div>
+            <div><dt>What I did</dt><dd>A CNN detection pipeline in Python and OpenCV, tuned for the precision and recall trade-off an alerting system needs.</dd></div>
+            <div><dt>Result</dt><dd>89.73% AUC on real-time detection.</dd></div>
+          </dl>
+          <ul class="tags"><li>Python</li><li>CNN</li><li>OpenCV</li></ul>
+        </article>
+        <div class="rail__end">
+          <p class="prose">The code that can be public is on GitHub.</p>
+          <p><a href="https://github.com/SJAlanA" target="_blank" rel="noopener">github.com/SJAlanA</a></p>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- THE CLOSE: resolve. The last item is crossed off and the page holds. -->
+  <section class="close" id="contact" data-chapter="5" data-ch="Last Chapter" data-title="Your Move">
+    <div class="wrap close__grid">
+      <div class="close__body">
+        <p class="ch-label">Last chapter</p>
+        <h2 class="disp disp--ch" id="close-head">That’s the list.</h2>
+        <p class="lede">I’m looking for full-time engineering and program management roles starting mid-2027, and I’m open to relocating.</p>
+        <p class="close__mail"><a href="mailto:sahaijordialan@gmail.com">Email me</a> at sahaijordialan@gmail.com</p>
+        <p class="close__links">
+          <a href="https://drive.google.com/file/d/15IskN5gDI7DLVEVsUZ1pJvz-WcJCo0FW/view?usp=sharing" target="_blank" rel="noopener">Résumé (PDF)</a>
+          <a href="https://www.linkedin.com/in/sahaijordialana" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/SJAlanA" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://leetcode.com/u/Sahai-Jordi-Alan-A/" target="_blank" rel="noopener">LeetCode</a>
+        </p>
+
+        <form class="form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <h3>Or write here</h3>
+          <input type="hidden" name="access_key" value="434b1c42-4a2b-4667-b8ad-07b38de0ac61">
+          <input type="hidden" name="subject" value="New message from your portfolio">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="form__row">
+            <label>Name<input name="name" autocomplete="name" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          </div>
+          <label>Message<textarea name="message" required></textarea></label>
+          <button class="btn" type="submit">Send</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="wrap colophon">
+      <div>
+        <h3>Management &amp; delivery</h3>
+        <p>Program and project coordination, stakeholder communication and reporting, test planning and validation, requirements traceability (DOORS), Jira, Git, agile delivery, budget ownership, mentorship and onboarding.</p>
+      </div>
+      <div>
+        <h3>Technical foundation</h3>
+        <p>Python, C/C++, Bash. n8n, Claude API, OpenCV. Penetration testing, firmware analysis, reverse engineering. CAN, LIN, UDS, XCP, FlexRay, automotive Ethernet, TCP/IP, TLS. CANoe, Wireshark. OWASP Top 10, MITRE ATT&amp;CK.</p>
+      </div>
+      <div>
+        <h3>Writing</h3>
+        <ul>
+          <li><a href="https://www.linkedin.com/posts/sahaijordialana_projects-cegtechforum-kurukshetra-activity-7198382442422951937-2-xW" target="_blank" rel="noopener">Leading the projects vertical at CEG Tech Forum</a></li>
+          <li><a href="https://www.linkedin.com/posts/sahaijordialana_cybersecurity-internship-careergrowth-activity-7222298401470652416-zmyg" target="_blank" rel="noopener">Starting my career in automotive cybersecurity</a></li>
+        </ul>
+      </div>
+      <p class="fine">© 2026 S J Alan Anbu Kulandainathan. Set in Archivo and Geist. The ECU image is illustrative. Every other photo is real.</p>
+    </footer>
+  </section>
+
+</main>
+
+<script type="module">
+import './src/scrollcraft.js';
+ScrollCraft.mount(document.body);
+
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var wide = window.matchMedia('(min-width: 1100px)');
+  var folio = document.getElementById('folio');
+  var slot = document.querySelector('.title__slot');
+  var ghost = document.querySelector('.title__ghost');
+  var photo = document.querySelector('.title__photo');
+  var copy = document.querySelector('.title__copy');
+  var items = Array.prototype.slice.call(folio.querySelectorAll('.list li'));
+  var marks = Array.prototype.slice.call(folio.querySelectorAll('.marks i'));
+  var nowCh = folio.querySelectorAll('[data-now-ch]');
+  var nowTitle = folio.querySelectorAll('[data-now-title]');
+  var tally = folio.querySelector('[data-tally]');
+  var toggle = folio.querySelector('.folio__toggle');
+
+  var chapters = [1, 2, 3, 4, 5].map(function (n) {
+    var start = document.querySelector('[data-chapter="' + n + '"]');
+    var end = document.querySelector('[data-chapter-end="' + n + '"]') || start;
+    return { n: n, start: start, end: end, ch: start.getAttribute('data-ch'), title: start.getAttribute('data-title') };
+  });
+  var closeHead = document.getElementById('close-head');
+
+  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
+  var ease = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };
+
+  // Where the card sits on the title page, measured as if scrolled to the top.
+  var hero = null;
+  function measure() {
+    hero = null;
+    copy.style.opacity = '';
+    if (!wide.matches || reduce.matches || !slot) return;
+    folio.style.transform = 'none';
+    if (photo) photo.style.transform = 'none';
+    var f = folio.getBoundingClientRect();
+    var s = slot.getBoundingClientRect();
+    var k = Math.min(s.width / f.width, s.height / f.height);
+    hero = { x: s.right - f.width * k - f.left, y: s.bottom + window.scrollY - f.height * k - f.top, k: k };
+  }
+
+  var lastNow = -1, last = '';
+  var cutAct = document.getElementById('ch2');
+  var yellows = Array.prototype.slice.call(document.querySelectorAll('section.ground-y'));
+  // Is the docked list sitting over a yellow ground right now?
+  function overYellow(vh) {
+    var fy = 6.4 * 16 + 60;  // the list's upper body, where the eye reads it
+    for (var i = 0; i < yellows.length; i++) {
+      var r = yellows[i].getBoundingClientRect();
+      if (r.top <= fy && r.bottom >= fy) return 1;
+    }
+    var c = cutAct.getBoundingClientRect();
+    var p = parseFloat(cutAct.style.getPropertyValue('--sc-p')) || 0;
+    if (c.top <= fy && c.bottom >= fy && p > 0.52) return 1;
+    return 0;
+  }
+  function frame() {
+    var vh = window.innerHeight, y = window.scrollY;
+    var inkMix = 0;
+
+    // 1. Dock: the list leaves the title page and settles in the margin.
+    var t = clamp(y / (vh * 0.42));
+    if (hero) {
+      // Rise first along the right edge, then cross to the margin once the
+      // title copy has scrolled away, so the card never passes over it.
+      var ey = ease(clamp(t / 0.5));
+      var e = ease(clamp((t - 0.42) / 0.58));
+      folio.style.transform = 'translate3d(' + (hero.x * (1 - e)).toFixed(2) + 'px,' + (hero.y * (1 - ey)).toFixed(2) + 'px,0) scale(' + (1 + (hero.k - 1) * (1 - ey)).toFixed(4) + ')';
+      // The title copy leaves before the list lands where it was reading.
+      copy.style.opacity = (1 - clamp((t - 0.3) / 0.4)).toFixed(3);
+      var d = clamp((e - 0.72) / 0.28);   // stays a solid card until it lands
+      folio.style.setProperty('--dock', d.toFixed(3));
+      folio.style.setProperty('--show', '1');
+      inkMix = 1 - d;
+    } else {
+      folio.style.setProperty('--dock', '1');
+      var show = clamp((y - vh * 0.55) / (vh * 0.3));
+      folio.style.setProperty('--show', show.toFixed(3));
+      folio.classList.toggle('is-live', show > 0.5);
+    }
+    if (wide.matches) inkMix = Math.max(inkMix, overYellow(vh));
+    folio.style.setProperty('--ink-mix', inkMix.toFixed(3));
+    if (ghost && !reduce.matches) ghost.style.transform = 'translate3d(0,' + (y * 0.42).toFixed(1) + 'px,0)';
+    if (photo && wide.matches && !reduce.matches && y < vh * 1.2) photo.style.transform = 'translate3d(0,' + (y * 0.2).toFixed(1) + 'px,0)';
+
+    // 2. Strikes. Each chapter's item is crossed off as the chapter's last
+    //    screen leaves; the final one as the closing headline settles.
+    var done = 0, sig = '';
+    for (var i = 0; i < chapters.length; i++) {
+      var s;
+      if (i === 4) {
+        var h = closeHead.getBoundingClientRect().top;
+        s = clamp((vh * 0.72 - h) / (vh * 0.32));
+      } else {
+        var b = chapters[i].end.getBoundingClientRect().bottom;
+        s = clamp((vh * 0.92 - b) / (vh * 0.38));
+      }
+      if (reduce.matches) s = s > 0.5 ? 1 : 0;
+      items[i].style.setProperty('--s', s.toFixed(3));
+      if (marks[i]) marks[i].style.setProperty('--s', s.toFixed(3));
+      if (s >= 0.99) done++;
+      sig += s.toFixed(2) + ',';
+    }
+    if (tally) tally.textContent = done;
+
+    // 3. Folio: which chapter is under the reader's eye.
+    var cur = -1;
+    for (var j = 0; j < chapters.length; j++) {
+      if (chapters[j].start.getBoundingClientRect().top <= vh * 0.5) cur = j;
+    }
+    if (cur !== lastNow) {
+      lastNow = cur;
+      var ch = cur < 0 ? 'The List' : chapters[cur].ch;
+      var ti = cur < 0 ? 'Opening' : chapters[cur].title;
+      for (var k = 0; k < nowCh.length; k++) { nowCh[k].textContent = ch; nowTitle[k].textContent = ti; }
+      items.forEach(function (li, n) { li.classList.toggle('is-current', n === cur); });
+    }
+    // Report what actually paints, for the verification harness.
+    var next = t.toFixed(2) + '|' + sig + cur;
+    if (next !== last) { folio.setAttribute('data-sc-verify-state', next); last = next; }
+    requestAnimationFrame(frame);
+  }
+
+  function relayout() { measure(); }
+  window.addEventListener('resize', relayout);
+  wide.addEventListener('change', relayout);
+  reduce.addEventListener('change', relayout);
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(relayout);
+  relayout();
+  requestAnimationFrame(frame);
+
+  // Mobile chip: open and close the list.
+  toggle.addEventListener('click', function () {
+    var open = folio.getAttribute('data-open') === 'true';
+    folio.setAttribute('data-open', String(!open));
+    toggle.setAttribute('aria-expanded', String(!open));
+  });
+  // Each list link lands where its chapter is already legible. Chapter Two
+  // opens on an authored silence, so a jump lands on its title card instead.
+  var landAt = { '#ch2': 0.2 };
+  folio.addEventListener('click', function (ev) {
+    var a = ev.target.closest('a');
+    if (!a) return;
+    if (!wide.matches) { folio.setAttribute('data-open', 'false'); toggle.setAttribute('aria-expanded', 'false'); }
+    var hash = a.getAttribute('href');
+    if (landAt[hash] == null) return;
+    var el = document.querySelector(hash);
+    ev.preventDefault();
+    var top = el.getBoundingClientRect().top + window.scrollY;
+    var travel = el.offsetHeight - window.innerHeight;
+    window.scrollTo({ top: top + travel * landAt[hash], behavior: reduce.matches ? 'auto' : 'smooth' });
+    history.replaceState(null, '', hash);
+  });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === 'Escape' && folio.getAttribute('data-open') === 'true') {
+      folio.setAttribute('data-open', 'false'); toggle.setAttribute('aria-expanded', 'false'); toggle.focus();
+    }
+  });
+
+  // Contact form. Posts to Web3Forms; reports the real outcome, never a
+  // pretend success. Without JS the form still POSTs to the same endpoint.
+  var form = document.getElementById('contact-form');
+  var status = form.querySelector('.form__status');
+  var button = form.querySelector('button');
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (!form.reportValidity()) return;
+    button.disabled = true; status.removeAttribute('data-kind'); status.textContent = 'Sending…';
+    fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok && j.success, j: j }; }); })
+      .then(function (res) {
+        if (res.ok) { form.reset(); status.dataset.kind = 'ok'; status.textContent = 'Sent. I’ll reply from sahaijordialan@gmail.com.'; }
+        else throw new Error(res.j && res.j.message);
+      })
+      .catch(function () {
+        status.dataset.kind = 'err';
+        status.innerHTML = 'That didn’t send. Please <a href="mailto:sahaijordialan@gmail.com">email me</a> directly.';
+      })
+      .then(function () { button.disabled = false; });
+  });
+})();
+</script>
+</body>
 </html>

@@ -1,8 +1,7 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Plain static site: one HTML page, the scrollcraft engine, and images.
+// `base` matches the GitHub Pages project path.
 export default defineConfig({
-  plugins: [react()],
   base: '/portfolio-website/',
 })
